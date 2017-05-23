@@ -1,0 +1,24 @@
+{
+  "name": "institute_webops_app",
+  "version": "1.0.0",
+  "description": "Problem statements",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Akshay",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.10.1",
+    "mongoose-title-case": "0.0.4",
+    "mongoose-validator": "^1.2.6",
+    "morgan": "^1.8.1",
+    "multer": "^1.3.0"
+  }
+}

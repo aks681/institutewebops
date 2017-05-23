@@ -1,0 +1,42 @@
+<div class="page-header">
+  <h1>User Details</h1>
+</div>
+<table class="table table-hover">
+<thead class="thead-default">
+<tr>
+  <th> ID </th>
+  <th> Name </th>
+  <th> Username </th>
+  <th> Email </th>
+  <th> Address </th>
+  <th> Hobbies </th>
+  <th> Gender </th>
+</tr>
+</thead>
+<tbody>
+  <tr>
+    <td>{{ main.id}}</td>
+    <td>{{ main.name }}</td>
+    <td>{{ main.username }}</td>
+    <td>{{ main.email }}</td>
+    <td>{{ main.address }}</td>
+    <td>{{ main.hobbies }}</td>
+    <td>{{ main.gender }}</td>
+  </tr>
+</tbody>
+</table>
+<br>
+<h3> Gallery </h3><br>
+<form ng-submit="Submit();">
+  <label class="btn btn-success">Browse Images
+  <input type="file" name="image" file-model="file.upload" ng-disabled="uploading" style="display: none;"> <br><br>
+  </label>
+  <button class="btn btn-primary" ng-disabled="uploading" type="submit">Upload</button>
+</form>
+<div class="row show-hide-message" ng-show="main.success">
+  <div class="alert alert-success"> {{main.success}} </div>
+</div>
+<br>
+<div class="row show-hide-message" ng-show="main.error">
+  <div class="alert alert-danger"> {{main.error}} </div>
+</div>

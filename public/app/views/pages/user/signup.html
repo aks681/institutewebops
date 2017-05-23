@@ -1,0 +1,41 @@
+<div class="page-header">
+  <h1>User Registration </h1>
+</div>
+<form ng-Submit="register.regUser(regData)">
+  <label> Name: </label>
+  <input class="form-control" type='text' name='name' placeholder="Enter Name (First and Last)" ng-model="register.regData.name">
+  <br>
+  <label> Gender: </label><br>
+  <input type="radio" name="gender" value="male" ng-model="register.male">Male<br>
+  <input type="radio" name="gender" value="female" ng-model="register.female">Female<br>
+  <br>
+  <label> Username: </label>
+  <input class="form-control" type='text' name='username' placeholder="Enter Username" ng-model="register.regData.username">
+  <br>
+  <label> Password: </label>
+  <input class="form-control" type='password' name='Password' placeholder="Enter Password" ng-model="register.regData.password">
+  <br>
+  <label> Email: </label>
+  <input class="form-control" type='text' name='email' placeholder="Enter Email" ng-model="register.regData.email">
+  <br>
+  <label> Address: </label>
+  <input class="form-control" type='text' name='address' placeholder="Enter Address" ng-model="register.regData.address">
+  <br>
+  <label> Hobbies (if any): </label>
+  <input class="form-control" type='text' name='hobby' placeholder="Enter your hobbies" ng-model="register.regData.hobbies">
+  <br>
+  <button class="btn btn-primary" type='submit'> Register </button>
+
+</form>
+<br>
+<div class="jumbotron text-center" ng-show="register.loading">
+  <span class "glyphicon glyphicon-repeat spinner"></span>
+  <p>Loading...</p>
+</div>
+<div class="row show-hide-message" ng-show="register.successMsg">
+  <div class="alert alert-success"> {{register.successMsg}} </div>
+</div>
+<br>
+<div class="row show-hide-message" ng-show="register.errorMsg">
+  <div class="alert alert-danger"> {{register.errorMsg}} </div>
+</div>
